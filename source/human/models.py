@@ -24,3 +24,11 @@ class Offender(models.Model):
 
         return '%s' % (self.phone_number)
 
+class User(models.Model):
+
+    location = models.CharField(max_length=30, blank=True, default=None)
+
+    def __unicode__(self):
+
+        return '%s' % (self.location)
+
