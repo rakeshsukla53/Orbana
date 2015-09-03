@@ -5,7 +5,12 @@
     <title></title>
 </head>
 <body>
-<h1>Human Trafficking through DataScience</h1>
+<h2>{{template_title}}</h2>   <!-- {{template_title}} is our context variable -->
+<form method = 'POST' action=''>{% csrf_token %}  <!-- action is where it will go -->
+{{form}}    <!-- you can also do like {{form.as_p}} it will format your forms -->
+
+<input type="submit" value="View" />
+</form>
 </body>
 </html>
 

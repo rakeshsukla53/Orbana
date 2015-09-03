@@ -16,7 +16,7 @@ class UserForm(forms.ModelForm):
         fields = ["location"]
         #exclude use springly
 
-    def clean_location(self):  #clean_name_of_the_field
+    def clean_location(self):  #clean_name_of_the_field  #validation technique
 
         #Address validator https://pypi.python.org/pypi/smartystreets.py
 
@@ -26,7 +26,7 @@ class UserForm(forms.ModelForm):
         #     raise forms.ValidationError("Please use a valid college address")  #for raising validation error of any kind
         return "California"
 
-       
+
 
 
 
