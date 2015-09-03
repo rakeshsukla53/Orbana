@@ -2,15 +2,22 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>DataTraffick</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-<h2>{{template_title}}</h2>   <!-- {{template_title}} is our context variable -->
-<form method = 'POST' action=''>{% csrf_token %}  <!-- action is where it will go -->
-{{form.as_p}}    <!-- you can also do like {{form.as_p}} it will format your forms -->
+		<p style = "font-family: Optima; text-align: center; font-size: 400%; position: absolute; top: 10%; left: 40%;" >DataTraffick</p> 
 
-<input type="submit" value="View" />
-</form>
+        <form style = "position: absolute; top: 40%; left: 48%;"id = "viewData" action = "{% url 'human:index' %}" method="post" >
+            {% csrf_token %}
+            <button  id = "submit_btn" type="submit" form="viewData" value="Submit" class="btn btn-info btn-block">Visualize</button>  
+        </form>
+        {% for  each in high %}
+        <p>{{each}}</p>
+        {% endfor %}
 </body>
 </html>
 
