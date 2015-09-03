@@ -23,7 +23,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^human/', include('human.urls', namespace = 'human')),
+    url(r'^human/', include('human.urls', namespace='human')),
 )+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
