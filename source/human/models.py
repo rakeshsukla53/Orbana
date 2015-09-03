@@ -5,22 +5,22 @@ class Phone(models.Model):
 
     phone_number = models.IntegerField()
     area_code = models.IntegerField()
-    latitude = models.FloatField(max_length=20, null=True)
-    longitude = models.FloatField(max_length=20, null=True)
-    location = models.CharField(max_length=30, null=True)
+    latitude = models.FloatField(null=True, blank=True)
+    longitude = models.FloatField(null=True, blank=True)
+    location = models.CharField(max_length=100, null=True, blank=True)
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 
     def __unicode__(self):
-        return self.phone_number
+        return '%s' % (self.phone_number)
 
 class Offender(models.Model):
 
     phone_number = models.IntegerField()
-    name = models.CharField(max_length=30, null=True)  #blank and null are different
-    location = models.CharField(max_length=30, null=True)
-    person_image = models.ImageField(max_length=300, null=True)
+    name = models.CharField(max_length=30, blank=True, default=None)  #blank and null are different
+    location = models.CharField(max_length=30, blank=True, default=None)
+    person_image = models.ImageField(max_length=300, blank=True, default=None)
 
     def __unicode__(self):
 
-        return self.phone_number
+        return '%s' % (self.phone_number)
 
