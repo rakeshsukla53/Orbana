@@ -8,8 +8,15 @@ def human(request):
     title = "Welcome"
     form = UserForm()  #creating instance of the form
 
-    if request.method == 'POST':
-        print request.POST #if you want to see the data  #if you want to view the DATA
+    if form.is_valid():   #checking if the form is valid
+        instance = form.save(commit=False)
+        if not instance.location:
+            instance.location = "New York"  #here you can modify your data and decided you want to save it in databbase
+        instance.save()  #it will save your data
+        print instance.location
+
+    # if request.method == 'POST':
+    #     print request.POST #if you want to see the data  #if you want to view the DATA
     if request.user.is_authenticated():   #this is the user authentication method here
 
         title = "Human Trafficking" + " " + str(request.user)
