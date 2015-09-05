@@ -261,7 +261,7 @@ th {
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('dev-plugins/fonts/glyphicons-halflings-regular.eot');
-  src: url('dev-plugins/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('dev-plugins/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('dev-plugins/fonts/glyphicons-halflings-regular.woff') format('woff'), url('dev-plugins/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('dev-plugins/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('dev-plugins/fonts/glyphicons-halflings-regular-.eot#iefix') format('embedded-opentype'), url('dev-plugins/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('dev-plugins/fonts/glyphicons-halflings-regular.woff') format('woff'), url('dev-plugins/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('dev-plugins/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -8046,8 +8046,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('dev-plugins/fonts/fontawesome-webfont.eot?v=4.3.0');
-  src: url('dev-plugins/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('dev-plugins/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('dev-plugins/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('dev-plugins/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('dev-plugins/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  src: url('dev-plugins/fonts/fontawesome-webfont-v=4.3.0.eot');
+  src: url('dev-plugins/fonts/fontawesome-webfont-.eot#iefix&v=4.3.0') format('embedded-opentype'), url('dev-plugins/fonts/fontawesome-webfont-v=4.3.0.woff2') format('woff2'), url('dev-plugins/fonts/fontawesome-webfont-v=4.3.0.woff') format('woff'), url('dev-plugins/fonts/fontawesome-webfont-v=4.3.0.ttf') format('truetype'), url('dev-plugins/fonts/fontawesome-webfont-v=4.3.0.svg#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -11001,7 +11001,7 @@ button.close {
 }
 .jstree-default .jstree-node,
 .jstree-default .jstree-icon {
-  background-image: url(../img/plugins/jstree/32px.png);
+  background-image: url("../img/plugins/jstree/32px.png");
 }
 .jstree-default .jstree-node {
   background-position: -292px -4px;
@@ -11097,13 +11097,13 @@ button.close {
   background-position: 0 0;
 }
 .jstree-default > .jstree-container-ul .jstree-loading > .jstree-ocl {
-  background: url(../img/plugins/jstree/throbber.gif) center center no-repeat;
+  background: url("../img/plugins/jstree/throbber.gif") center center no-repeat;
 }
 .jstree-default .jstree-file {
-  background: url(../img/plugins/jstree/32px.png) -100px -68px no-repeat;
+  background: url("../img/plugins/jstree/32px.png") -100px -68px no-repeat;
 }
 .jstree-default .jstree-folder {
-  background: url(../img/plugins/jstree/32px.png) -260px -4px no-repeat;
+  background: url("../img/plugins/jstree/32px.png") -260px -4px no-repeat;
 }
 .jstree-default > .jstree-container-ul > .jstree-node {
   margin-left: 0;
@@ -11115,7 +11115,7 @@ button.close {
 }
 #jstree-dnd.jstree-default .jstree-ok,
 #jstree-dnd.jstree-default .jstree-er {
-  background-image: url(../img/plugins/jstree/32px.png);
+  background-image: url("../img/plugins/jstree/32px.png");
   background-repeat: no-repeat;
   background-color: transparent;
 }
@@ -11165,7 +11165,7 @@ button.close {
 }
 .jstree-default-small .jstree-node,
 .jstree-default-small .jstree-icon {
-  background-image: url(../img/plugins/jstree/32px.png);
+  background-image: url("../img/plugins/jstree/32px.png");
 }
 .jstree-default-small .jstree-node {
   background-position: -295px -7px;
@@ -11261,13 +11261,13 @@ button.close {
   background-position: 0 0;
 }
 .jstree-default-small > .jstree-container-ul .jstree-loading > .jstree-ocl {
-  background: url(../img/plugins/jstree/throbber.gif) center center no-repeat;
+  background: url("../img/plugins/jstree/throbber.gif") center center no-repeat;
 }
 .jstree-default-small .jstree-file {
-  background: url(../img/plugins/jstree/32px.png) -103px -71px no-repeat;
+  background: url("../img/plugins/jstree/32px.png") -103px -71px no-repeat;
 }
 .jstree-default-small .jstree-folder {
-  background: url(../img/plugins/jstree/32px.png) -263px -7px no-repeat;
+  background: url("../img/plugins/jstree/32px.png") -263px -7px no-repeat;
 }
 .jstree-default-small > .jstree-container-ul > .jstree-node {
   margin-left: 0;
@@ -11279,7 +11279,7 @@ button.close {
 }
 #jstree-dnd.jstree-default-small .jstree-ok,
 #jstree-dnd.jstree-default-small .jstree-er {
-  background-image: url(../img/plugins/jstree/32px.png);
+  background-image: url("../img/plugins/jstree/32px.png");
   background-repeat: no-repeat;
   background-color: transparent;
 }
@@ -11329,7 +11329,7 @@ button.close {
 }
 .jstree-default-large .jstree-node,
 .jstree-default-large .jstree-icon {
-  background-image: url(../img/plugins/jstree/32px.png);
+  background-image: url("../img/plugins/jstree/32px.png");
 }
 .jstree-default-large .jstree-node {
   background-position: -288px 0;
@@ -11425,13 +11425,13 @@ button.close {
   background-position: 0 0;
 }
 .jstree-default-large > .jstree-container-ul .jstree-loading > .jstree-ocl {
-  background: url(../img/plugins/jstree/throbber.gif) center center no-repeat;
+  background: url("../img/plugins/jstree/throbber.gif") center center no-repeat;
 }
 .jstree-default-large .jstree-file {
-  background: url(../img/plugins/jstree/32px.png) -96px -64px no-repeat;
+  background: url("../img/plugins/jstree/32px.png") -96px -64px no-repeat;
 }
 .jstree-default-large .jstree-folder {
-  background: url(../img/plugins/jstree/32px.png) -256px 0 no-repeat;
+  background: url("../img/plugins/jstree/32px.png") -256px 0 no-repeat;
 }
 .jstree-default-large > .jstree-container-ul > .jstree-node {
   margin-left: 0;
@@ -11443,7 +11443,7 @@ button.close {
 }
 #jstree-dnd.jstree-default-large .jstree-ok,
 #jstree-dnd.jstree-default-large .jstree-er {
-  background-image: url(../img/plugins/jstree/32px.png);
+  background-image: url("../img/plugins/jstree/32px.png");
   background-repeat: no-repeat;
   background-color: transparent;
 }
@@ -11478,12 +11478,12 @@ button.close {
     height: 40px;
   }
   #jstree-dnd.jstree-dnd-responsive > .jstree-ok {
-    background-image: url(../img/plugins/jstree/40px.png);
+    background-image: url("../img/plugins/jstree/40px.png");
     background-position: 0 -200px;
     background-size: 120px 240px;
   }
   #jstree-dnd.jstree-dnd-responsive > .jstree-er {
-    background-image: url(../img/plugins/jstree/40px.png);
+    background-image: url("../img/plugins/jstree/40px.png");
     background-position: -40px -200px;
     background-size: 120px 240px;
   }
@@ -11496,7 +11496,7 @@ button.close {
 }
 @media (max-width: 768px) {
   .jstree-default-responsive .jstree-icon {
-    background-image: url(../img/plugins/jstree/40px.png);
+    background-image: url("../img/plugins/jstree/40px.png");
   }
   .jstree-default-responsive .jstree-node,
   .jstree-default-responsive .jstree-leaf > .jstree-ocl {
@@ -11598,7 +11598,7 @@ button.close {
   .jstree-default-responsive .jstree-node > .jstree-ocl,
   .jstree-default-responsive .jstree-themeicon,
   .jstree-default-responsive .jstree-checkbox {
-    background-image: url(../img/plugins/jstree/40px.png);
+    background-image: url("../img/plugins/jstree/40px.png");
     background-size: 120px 240px;
   }
   .jstree-default-responsive .jstree-node {
@@ -11620,11 +11620,11 @@ button.close {
     background-position: 0 0;
   }
   .jstree-default-responsive .jstree-file {
-    background: url(../img/plugins/jstree/40px.png) 0 -160px no-repeat;
+    background: url("../img/plugins/jstree/40px.png") 0 -160px no-repeat;
     background-size: 120px 240px;
   }
   .jstree-default-responsive .jstree-folder {
-    background: url(../img/plugins/jstree/40px.png) -40px -40px no-repeat;
+    background: url("../img/plugins/jstree/40px.png") -40px -40px no-repeat;
     background-size: 120px 240px;
   }
   .jstree-default-responsive > .jstree-container-ul > .jstree-node {
@@ -12390,7 +12390,7 @@ button.close {
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
   .dropzone .dz-preview .dz-progress .dz-upload,
   .dropzone-previews .dz-preview .dz-progress .dz-upload {
-    background-image: url("../../img/plugins/dropzone/spritemap@2x.png");
+    background-image: url("http://aqvatarius.com/themes/img/plugins/dropzone/spritemap@2x.png");
     -webkit-background-size: 428px 406px;
     -moz-background-size: 428px 406px;
     background-size: 428px 406px;
@@ -14930,7 +14930,7 @@ Interactive Layer
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
   .dev-page .dev-page-header .dph-logo > a {
-    background-image: url(../img/logo@2x.png);
+    background-image: url("../img/logo@2x.png");
     background-size: 300px 55px;
   }
 }
@@ -16576,7 +16576,7 @@ table[data-sortable] th[data-sorted-direction="ascending"]:after {
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
   .dev-page.dev-page-login .dev-page-login-block__logo {
-    background-image: url(../img/logo@2x.png);
+    background-image: url("../img/logo@2x.png");
     background-size: 300px 55px;
   }
 }
@@ -22285,15 +22285,6 @@ code {
   margin-right: -110px;
 }
 
-.profile .profile-image .profile-status.online {
-  background: #82b440;
-}
-.profile .profile-image .profile-status.away {
-  background: #f3bc65;
-}
-.profile .profile-image .profile-status.offline {
-  background: #e74e40;
-}
 .profile .profile-image:after {
   content: " ";
   position: absolute;
