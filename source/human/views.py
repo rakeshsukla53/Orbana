@@ -64,10 +64,21 @@ def mapData(request):
 	data = {}
 	numbers = Phone.objects.all()
 
-
+	counter = 0 
 	for num in numbers:
-		data[num.phone_number] = [num.latitude, num.longitude, num.full_name, num.frequency] 
-		
+		pos = str(num.latitude)+" "+ str(num.longitude)
+
+		if pos not in data:
+			data[pos] = [1]
+			data[pos]
+			data[pos].append([num.phone_number, num.frequency])
+		else:
+			data[pos][0] = data[pos][0] + 1
+			data[pos].append([num.phone_number, num.frequency])
+			
+		counter = counter + 1
+
+
 	return HttpResponse(json.dumps(data), content_type = "application/json")
 
 
