@@ -17,7 +17,6 @@ class Problem(models.Model):
 class State(models.Model):
     state_name = models.CharField(max_length = 254, null = True)
     offender_count = models.IntegerField(default = 0, blank = True)
-    problem = models.ForeignKey('Problem', blank = True)
 
     def __unicode__(self):
         return '%s' % (self.state_name)
