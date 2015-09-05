@@ -7,7 +7,10 @@ from django.utils import timezone
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from human.models import Phone, State
+from django.core.mail import send_mail
 import csv
+from django.conf import settings
+from django.contrib import messages	
 
 # Create your views here.
 class index(View):
@@ -23,8 +26,8 @@ class index(View):
 		state_name = request.POST.get('location')
 		state = State.objects.get(state_name = state_name)
 		count = state.offender_count
-		
-		return render(request, "visualise_data.html", {'state_name': state_name, 'count': count})
+		#send_mail('Subject here', 'Here is the message.', 'rishabhranawat12345@gmail.com', ['rdr324@nyu.edu'], fail_silently = False)
+		return render(request, "index.html", {'state_name': state_name, 'count': count})
 
 class action(View):
 
@@ -39,11 +42,15 @@ class action(View):
 		problem = state.problem.problem_name
 		count = state.offender_count
 		
-		return render(request, "visualise_data.html", {'state_name': state_name, 'problem': problem, 'count': count})
+		return render(request, "index.html", {'state_name': state_name, 'problem': problem, 'count': count})
 
 
 
 
+class orgAction(View):
 
+	def get(self, request, *args, **kwargs):
+		return render(request, "org_action.html", {})
 
-
+	def post(self, request, *args, **kwargs):
+		return HttpResponse("Okay")
