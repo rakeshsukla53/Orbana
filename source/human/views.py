@@ -6,7 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect, HttpRequest
 from django.utils import timezone
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
-from human.models import Phone, State
+from human.models import Phone, State, Organization
 from django.core.mail import send_mail
 import csv
 from django.conf import settings
@@ -49,9 +49,12 @@ class action(View):
 
 class orgAction(View):
 
-	def get(self, request, pk,  *args, **kwargs):
-		print pk
+	def get(self, request, state_name,  *args, **kwargs):
+		print state_name
+		all_objects = Organization.objects.all()
 		return render(request, "org_action.html", {})
 
 	def post(self, request, *args, **kwargs):
 		return HttpResponse("Okay")
+
+
