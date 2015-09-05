@@ -42,14 +42,15 @@ class action(View):
 		problem = state.problem.problem_name
 		count = state.offender_count
 		
-		return render(request, "index.html", {'state_name': state_name, 'problem': problem, 'count': count})
+		return render(request, "index.html", {'state': state, 'state_name': state_name, 'problem': problem, 'count': count})
 
 
 
 
 class orgAction(View):
 
-	def get(self, request, *args, **kwargs):
+	def get(self, request, pk,  *args, **kwargs):
+		print pk
 		return render(request, "org_action.html", {})
 
 	def post(self, request, *args, **kwargs):
