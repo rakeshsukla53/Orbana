@@ -13,7 +13,6 @@ class Problem(models.Model):
     )
     priority = models.CharField(max_length = 1, choices = PRIORITY_CHOICES)
 
-
 class State(models.Model):
     state_name = models.CharField(max_length = 254, null = True)
     offender_count = models.IntegerField(default = 0, blank = True)
