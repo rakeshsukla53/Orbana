@@ -3,7 +3,6 @@ __author__ = 'rakesh'
 from itertools import groupby
 import collections
 import requests
-from .models import Phone
 
 
 whitePage = 'https://proapi.whitepages.com/2.1/phone.json?api_key=4fe914c0a697d7d1d4db193a1bc50eda&phone_number='
