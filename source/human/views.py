@@ -22,10 +22,9 @@ class index(View):
 		
 		state_name = request.POST.get('location')
 		state = State.objects.get(state_name = state_name)
-		problem = state.problem.problem_name
 		count = state.offender_count
 		
-		return render(request, "visualise_data.html", {'state_name': state_name, 'problem': problem, 'count': count})
+		return render(request, "visualise_data.html", {'state_name': state_name, 'count': count})
 
 class action(View):
 

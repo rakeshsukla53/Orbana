@@ -25,7 +25,7 @@ class Phone(models.Model):
 
     phone_number = models.IntegerField(null = True)
     area_code = models.IntegerField()
-    
+    frequency = models.IntegerField(default = 0)
     latitude = models.FloatField(null=True, blank=True)
     longitude = models.FloatField(null=True, blank=True)
     location = models.CharField(max_length=100, null=True, blank=True)
