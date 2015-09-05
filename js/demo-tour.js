@@ -8,34 +8,40 @@ $(function(){
     var tour = new Tour({
         storage: false,
         steps: [
-        {
+         {
           element: "#tour-step-1",
-          title: "Page Header",
-          content: "Important feature with controls, that gives you a possibility to quickly use elements.",
-          placement: "bottom"
-        },
-        {
+          title: "Orbona? Ohana?",
+          content: "According to the Romans, Orbona was the goddess of children and orphans, and would grant new children to parents for a second chance.",
+          placement: "right"
+         },
+            {
           element: "#tour-step-2",
-          title: "Sidebar",
-          content: "Sidebar contents with the navigation that works well on any resolution.",
+          title: "Activity Location",
+          content: "The general area of activity, determined by referencing area codes.",
           placement: "right"
         },
         {
           element: "#tour-step-3",
-          title: "Footer",
-          content: "Used for navigation controls, statistic and other features.",
+          title: "Local Statistics",
+          content: "Wondering when and where human trafficking is? We'll let you know right here.",
           placement: "top"
         },
         {
           element: "#tour-step-4",
-          title: "Page Heading",
-          content: "Can be used with page title, subtitle and breadcrumb.",
-          placement: "bottom"
+          title: "Data Visualization",
+          content: "We've made understanding several thousand sets of data easier on the eyes and the mind.",
+          placement: "top"
         },
         {
           element: "#tour-step-5",
-          title: "Content",
-          content: "Here you can use a big count of ready to use elements and features.",
+          title: "Social Awareness",
+          content: "Listen into local conversations so you're always informed. Click on the Square above to contact organizations and representatives directly.",
+          placement: "left"
+        },
+        {
+          element: "#tour-step-6",
+          title: "In Depth",
+          content: "If you want to go deeper, we have enough data to satisfy even the most curious.",
           placement: "top"
         }
     ]});

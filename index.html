@@ -38,18 +38,24 @@
             <!-- page header -->    
             <div class="dev-page-header">
                 
-                <div class="dph-logo">
+                <div class="dph-logo" id="tour-step-1">
                     <a href="index.html">Orbana!</a>
                     <a class="dev-page-sidebar-collapse">
                         <div class="dev-page-sidebar-collapse-icon">
                             <span class="line-one"></span>
                             <span class="line-two"></span>
                             <span class="line-three"></span>
+                            
                         </div>
                     </a>
                 </div>
 
-                <ul class="dph-buttons pull-right">                    
+                <ul class="dph-buttons pull-right"> 
+                    
+                    <li class="dph-button-stuck" class="dev-page-sidebar">
+                        <a href="index.html#" class="btn btn-xs start-tour">Tour</a>
+                    </li>
+                    
                     <li class="dph-button-stuck">
                         <a href="index.html#" class="dev-page-search-toggle">
                             <div class="dev-page-search-toggle-icon">
@@ -57,7 +63,8 @@
                                 <span class="line"></span>
                             </div>
                         </a>
-                    </li>                    
+                    </li>     
+                    
                     <li class="dph-button-stuck">
                         <a href="index.html#" class="dev-page-rightbar-toggle">
                             <div class="dev-page-rightbar-toggle-icon">
@@ -66,6 +73,9 @@
                             </div>
                         </a>
                     </li>
+                    
+                  
+                    
                 </ul>                                                
                 
             </div>
@@ -85,14 +95,14 @@
                                 <a href="index.html#" class="profile-badges-right"><i class="fa fa-users"></i> 1,971</a>
                             </div>
                         </div>
-                        <div class="profile-info">
+                        <div class="profile-info" id="tour-step-2">
                             <h4>Location Name</h4>
                             <span>Bigger Location Place</span>
                         </div>                        
                     </div>
                     
                     <ul class="dev-page-navigation">
-                        <li class="title">Navigation</li>
+                        <li class="title" id="tour-step-3">Navigation</li>
                         <li class="active">
                             <a href="index.html"><i class="fa fa-desktop"></i> <span>Dashboard</span></a>
                         </li>                        
@@ -228,9 +238,8 @@
                         
                         <div class="row row-condensed">
                             <div class="col-lg-9 col-md-6">
-                                
                                 <div class="wrapper">
-                                    <div class="page-subtitle">
+                                    <div class="page-subtitle" id="tour-step-4">
                                         <h2>Summary profit</h2>
                                         <div class="pull-right">
                                             <div class="btn-group">
@@ -345,7 +354,7 @@
                             <div class="col-lg-3 col-md-6">
                                 <div class="widget-tabbed margin-top-30">
                                     <ul class="widget-tabs widget-tabs-three">
-                                        <li class="active"><a href="index.html#tasks">Tasks</a></li>                                        
+                                        <li class="active" id="tour-step-5"><a href="index.html#tasks">Local Tweets</a></li>                                        
                                         <li><a href="index.html#activity">Activity</a></li>                                        
                                     </ul>                                    
                                     <div class="widget-tab list-tasks active" id="tasks">
@@ -627,57 +636,68 @@
             <!-- ./page container -->
             
             <!-- right bar -->
+            
             <div class="dev-page-rightbar">
                 <div class="rightbar-chat">
 
                     <div class="rightbar-chat-frame-contacts scroll">
                         <div class="rightbar-title">
-                            <h3>Messages</h3>
+                            <h3>Connect to NGOs and Organizations</h3>
                             <a href="index.html#" class="btn btn-default btn-rounded rightbar-close pull-right"><span class="fa fa-times"></span></a>
                         </div>
                         <ul class="contacts">
-                            <li class="title">online</li>
+                            <li class="title">East Coast</li>
                             <li>
-                                <a href="index.html#" class="status online">
-                                    <img src="assets/images/users/user_1.jpg" title="Aqvatarius"> John Doe                                            
+                                <a href="index.html#">
+                                    <img src="assets/images/users/user_1.jpg" title="org"><h6>Break the Chain Project</h6>
+                                    <p>Washington, D.C.</p>
                                 </a>
                             </li>                                    
                             <li>
-                                <a href="index.html#" class="status online">
-                                    <img src="assets/images/users/user_2.jpg" title="Aqvatarius"> Shannon Freeman                                            
+                                <a href="index.html#">
+                                    <img src="assets/images/users/user_2.jpg" title="org"> <h6>Covenant House</h6>  
+                                    <p>New York</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#" class="status away">
-                                    <img src="assets/images/users/user_3.jpg" title="Aqvatarius"> Devin Stephens                                            
-                                </a>
-                            </li>                                    
-                            <li>
-                                <a href="index.html#" class="status away">
-                                    <img src="assets/images/users/user_4.jpg" title="Aqvatarius"> Marissa George                                           
+                                <a href="index.html#">
+                                    <img src="assets/images/users/user_3.jpg" title="org"> <h6>Safe Horizon</h6>  
+                                    <p>New York</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#" class="status dont">
-                                    <img src="assets/images/users/user_5.jpg" title="Aqvatarius"> Sydney Reeves                                           
+                                <a href="index.html#">
+                                    <img src="assets/images/users/user_4.jpg" title="org"> <h6>Project to End Human Trafficking</h6>      
+                                    <p>Pennsyvania</p>
                                 </a>
                             </li>
-                            <li class="title">offline</li>
+                            <li class="title">West Coast</li>
+                             <li>
+                                <a href="index.html#">
+                                    <img src="assets/images/users/user_5.jpg" title="org"> <h6>Humanatis</h6>   
+                                    <p>California</p>
+                                </a>
+                            </li>
+                            <li class="title">National</li>
                             <li>
-                                <a href="index.html#" class="status">
-                                    <img src="assets/images/users/user_6.jpg" title="Aqvatarius"> Kaitlynn Bowen                                           
+                                <a href="index.html#">
+                                    <img src="assets/images/users/user_6.jpg" title="org"><h6>Polaris Project</h6>   
+                                    <p>United States</p>
+                                </a>
+                            </li>
+                            <li class="title">International</li>
+                            <li>
+                                <a href="index.html#">
+                                    <img src="assets/images/users/user_6.jpg" title="org"><h6>Cambodia Anti-Child Trafficking Coalition</h6>
+                                    <p>Cambodia</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#" class="status">
-                                    <img src="assets/images/users/user_7.jpg" title="Aqvatarius"> Karen Spencer                                            
+                                <a href="index.html#">
+                                    <img src="assets/images/users/user_7.jpg" title="org"><h6>The Asia Foundation</h6>
+                                    <p>China</p>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="index.html#" class="status">
-                                    <img src="assets/images/users/user_8.jpg" title="Aqvatarius"> Darrell Wolfe                                            
-                                </a>
-                            </li>                                    
+                            </li>                                  
                         </ul>
                     </div>
 
@@ -861,7 +881,7 @@
                 <!-- ./page footer container -->
                 
                 <ul class="dev-page-footer-controls dev-page-footer-controls-auto pull-right">
-                    <li><a class="dev-page-footer-fix tip" title="Fixed footer"><i class="fa fa-thumb-tack"></i></a></li>
+                    <li><a class="dev-page-footer-fix tip" title="Fixed footer"><i class="fa fa-thumb-tack" id="tour-step-6"></i></a></li>
                     <li><a class="dev-page-footer-collapse dev-page-footer-control-stuck"><i class="fa fa-dot-circle-o"></i></a></li>
                 </ul>
             </div>
@@ -888,6 +908,8 @@
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>       
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
         
+         <script type="text/javascript" src="js/plugins/bootstrap-tour/bootstrap-tour.min.js"></script>
+        
         <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>        
         <script type="text/javascript" src="js/plugins/moment/moment.js"></script>
         
@@ -909,6 +931,8 @@
         <script type="text/javascript" src="js/demo.js"></script>
         <script type="text/javascript" src="js/dev-app.js"></script>
         <script type="text/javascript" src="js/demo-dashboard.js"></script>
+        
+        <script type="text/javascript" src="js/demo-tour.js"></script>
         <!-- ./javascript -->
     </body>
 </html>
