@@ -11,6 +11,7 @@ from django.core.mail import send_mail
 import csv
 from django.conf import settings
 from django.contrib import messages	
+import json
 
 # Create your views here.
 class index(View):
@@ -56,5 +57,17 @@ class orgAction(View):
 
 	def post(self, request, *args, **kwargs):
 		return HttpResponse("Okay")
+
+
+def mapData(request):
+
+	data = {}
+	numbers = Phone.objects.all()
+
+
+	for num in numbers:
+		data[num.phone_number] = [num.latitude, num.longitude, num.full_name, num.frequency] 
+		
+	return HttpResponse(json.dumps(data), content_type = "application/json")
 
 
