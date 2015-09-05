@@ -9,7 +9,7 @@ whitePage = 'https://proapi.whitepages.com/2.1/phone.json?api_key=4fe914c0a697d7
 
 phoneNumbers = []
 
-y = open("output.txt", "r")
+y = open("../output.txt", "r")
 
 for line in y:
 
@@ -21,6 +21,10 @@ for i in zip(sorted(counter.keys())[::-1], sorted(counter.values())[::-1]):
 
     #print i
 
+    print i
+
+    '''
+
     phoneNumber, frequency = list(i)[0], list(i)[1]
 
     areaCode = str(phoneNumber)[0:3]
@@ -29,7 +33,7 @@ for i in zip(sorted(counter.keys())[::-1], sorted(counter.values())[::-1]):
 
     Phone.objects.create(phone_number=phoneNumber, area_code=areaCode, frequency=frequency)
 
-    '''
+
     whitePageLink = whitePage + str(phoneNumber)
 
     try:
