@@ -26,9 +26,7 @@ class UserForm(forms.ModelForm):
         #     raise forms.ValidationError("Please use a valid college address")  #for raising validation error of any kind
         return "California"
 
-
-
-
-
+class LocationForm(forms.Form):
+    location = forms.CharField(max_length = 254)
 
 

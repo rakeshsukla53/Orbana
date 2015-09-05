@@ -1,14 +1,38 @@
 from django.db import models
 
 # Create your models here.
+
+class Problem(models.Model):
+
+    problem_name = models.CharField(max_length = 254, null = True, blank = True)
+
+    PRIORITY_CHOICES = (
+        ('H', 'High'),
+        ('M', 'Medium'),
+        ('L', 'Low'),
+    )
+    priority = models.CharField(max_length = 1, choices = PRIORITY_CHOICES)
+
+
+class State(models.Model):
+    state_name = models.CharField(max_length = 254, null = True)
+    offender_count = models.IntegerField(default = 0, blank = True)
+    problem = models.ForeignKey('Problem', blank = True)
+
+    def __unicode__(self):
+        return '%s' % (self.state_name)
+
 class Phone(models.Model):
 
-    phone_number = models.IntegerField()
+    phone_number = models.IntegerField(null = True)
     area_code = models.IntegerField()
+    
     latitude = models.FloatField(null=True, blank=True)
     longitude = models.FloatField(null=True, blank=True)
     location = models.CharField(max_length=100, null=True, blank=True)
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+    full_name = models.CharField(null = True, blank = True, max_length = 254)
+    state = models.ForeignKey('State', blank = True)
 
     def __unicode__(self):
         return '%s' % (self.phone_number)
@@ -31,4 +55,5 @@ class User(models.Model):
     def __unicode__(self):
 
         return '%s' % (self.location)
+
 

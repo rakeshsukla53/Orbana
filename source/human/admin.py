@@ -2,16 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from .forms import UserForm
-from .models import Phone, Offender, User
-
-
-class PhoneAdmin(admin.ModelAdmin):
-
-    list_display = ["__unicode__", "area_code", "timestamp", "latitude", "longitude", "location"]
-
-    class Meta:
-
-        model = Phone
+from .models import Phone, Offender, User, State, Problem
 
 
 class OffenderAdmin(admin.ModelAdmin):
@@ -32,7 +23,9 @@ class UserAdmin(admin.ModelAdmin):
     #     model = User
 
 
-admin.site.register(Phone, PhoneAdmin)
+admin.site.register(Phone)
+admin.site.register(State)
+admin.site.register(Problem)
 admin.site.register(Offender, OffenderAdmin)
 admin.site.register(User, UserAdmin)
 
