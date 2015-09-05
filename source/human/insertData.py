@@ -22,16 +22,13 @@ for i in zip(sorted(counter.keys())[::-1], sorted(counter.values())[::-1]):
 
     #print i
 
-
     phoneNumber, frequency = list(i)[0], list(i)[1]
 
     areaCode = str(phoneNumber)[0:3]
 
     print phoneNumber, frequency, areaCode
 
-    Phone.objects.create(phone_number = phoneNumber, area_code = areaCode,  )
-
-
+    Phone.objects.create(phone_number=phoneNumber, area_code=areaCode)
 
     '''
     whitePageLink = whitePage + str(phoneNumber)
