@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from .forms import UserForm
-from .models import Phone, Offender, User, State, Problem
+from .models import Phone, Offender, User, State, Problem, Organization
 
 
 class OffenderAdmin(admin.ModelAdmin):
@@ -26,6 +26,7 @@ class UserAdmin(admin.ModelAdmin):
 admin.site.register(Phone)
 admin.site.register(State)
 admin.site.register(Problem)
+admin.site.register(Organization)
 admin.site.register(Offender, OffenderAdmin)
 admin.site.register(User, UserAdmin)
 

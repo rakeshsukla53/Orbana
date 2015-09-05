@@ -21,6 +21,12 @@ class State(models.Model):
     def __unicode__(self):
         return '%s' % (self.state_name)
 
+class Organization(models.Model):
+    name = models.CharField(max_length = 254, null = True)
+    state = models.ForeignKey('State', blank = True)
+    phone_number = models.IntegerField(default = 0, null = True)
+    email = models.EmailField(max_length = 254, null = True)
+
 class Phone(models.Model):
 
     phone_number = models.IntegerField(null = True)
