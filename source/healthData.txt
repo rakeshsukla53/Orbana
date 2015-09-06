@@ -1,0 +1,52 @@
+Alaska	26
+Alabama	43
+United States
+Arkansas	49
+Arizona	29
+California	17
+Colorado	8
+Connecticut	4
+District of Columbia
+Delaware	35
+Florida	32
+Georgia	38
+Hawaii	1
+Iowa	24
+Idaho	18
+Illinois	30
+Indiana	41
+Kansas	27
+Kentucky	47
+Louisiana	48
+Massachusetts	3
+Maryland	16
+Maine	20
+Michigan	34
+Minnesota	6
+Missouri	36
+Mississippi	50
+Montana	22
+North Carolina	37
+North Dakota	9
+Nebraska	10
+New Hampshire	7
+New Jersey	11
+New Mexico	33
+Nevada	39
+New York	14
+Ohio	40
+Oklahoma	46
+Oregon	12
+Pennsylvania	28
+Rhode Island	15
+South Carolina	42
+South Dakota	18
+Tennessee	45
+Texas	31
+Utah	5
+Virginia	21
+Vermont	2
+Washington	13
+Wisconsin	23
+West Virginia	44
+Wyoming	25
