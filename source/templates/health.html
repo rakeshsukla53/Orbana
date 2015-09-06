@@ -2,7 +2,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Highcharts Example</title>
+        <title>Health Analysis</title>
+
+        {% load staticfiles %}
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
@@ -10,114 +14,89 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+
         <style type="text/css">
-#container, #sliders { 
-    
-    margin: 0 auto;
-}
-#container {
-    height: 600px; 
-    width: 1200px;
-}
+                ${demo.css}
         </style>
         <script type="text/javascript">
-$(function () {
-    // Set up the chart
-    var chart = new Highcharts.Chart({
-        chart: {
-            renderTo: 'container',
-            type: 'column',
-            margin: 75,
-            options3d: {
-                enabled: true,
-                alpha: 15,
-                beta: 15,
-                depth: 50,
-                viewDistance: 25
-            }
-        },
-        title: {
-            text: 'Frequency of probable offenders vs. State'
-        },
-        subtitle: {
-            text: 'Data collected on the basis of advertisements posted by probable human traffickers'
-        },
-        plotOptions: {
-            column: {
-                depth: 25
-            }
-        },
-        exporting:{
-            enabled: false
-        },
-        xAxis: {
-            categories: ['Texas', 'Louisana', 'North Carolina', 'California', 'Michigan', 'Kansas', 'Puerto Rico', 'Florida', 'New Jersey','Oregon'],            
-            gridLineWidth: 1,
-            minorGridLineWidth: 0,
-            title: {
-                text: 'States'
-            }
-        },
-        series: [{
-            name: 'Frequency in this state',
-            data: [35, 7, 23, 31, 25, 6, 7, 23, 13, 2]
-        }]
-    });
+            $(function () {
+                $('#container').highcharts({
 
-    function showValues() {
-        $('#R0-value').html(chart.options.chart.options3d.alpha);
-        $('#R1-value').html(chart.options.chart.options3d.beta);
-    }
+                    chart: {
+                        type: 'bubble',
+                        plotBorderWidth: 1,
+                        zoomType: 'xy'
+                    },
 
-    // Activate the sliders
-    $('#R0').on('change', function () {
-        chart.options.chart.options3d.alpha = this.value;
-        showValues();
-        chart.redraw(false);
-    });
-    $('#R1').on('change', function () {
-        chart.options.chart.options3d.beta = this.value;
-        showValues();
-        chart.redraw(false);
-    });
+                    title: {
+                        text: 'State ranking vs frequency of probable offenders for specific states'
+                    },
 
-    showValues();
-});
+                    xAxis: {
+                            categories: ['Texas', 'Louisana', 'North Carolina', 'California', 'Michigan', 'Kansas', 'Florida', 'New Jersey','Oregon'],            
+                            gridLineWidth: 1,
+                            minorGridLineWidth: 0,
+                            title: {
+                                text: 'States'
+                            }
+                    },
+                    exporting:{
+                        enabled: false
+                    },
+                    yAxis: {
+                        startOnTick: false,
+                        endOnTick: false,
+                        title: {
+                                text: 'frequency of probable offenders'
+                        }
+                    },
+
+                    series: [{
+                        name: 'State name, ranking, frequency',
+                        data: [
+                            ['Texas', 35, 31],
+                            ['Louisiana', 7, 48],
+                            ['North Carolina', 23, 9],
+                            ['Michigan', 25, 34],
+                            ['Kansas', 6, 27],
+                            ['Florida', 23, 32],
+                            ['New Jersey', 13, 33],
+                            ['Oregon', 2, 12],
+                        ],
+                        marker: {
+                            fillColor: {
+                                radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
+                                stops: [
+                                    [0, 'rgba(255,255,255,0.5)'],
+                                    [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0.5).get('rgba')]
+                                ]
+                            }
+                        }
+                    }]
+
+                });
+            });
         </script>
     </head>
     <body>
-{% load staticfiles %}
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src= "{% static 'human/highcharts.js' %}"></script>
+    <script type="text/javascript" src= "{% static 'human/highcharts-3d.js' %}"></script>
+    <script type="text/javascript" src= "{% static 'human/exporting.js' %}"></script>
+    <script type="text/javascript" src= "{% static 'human/highcharts-more.js' %}"></script>
 
-<script type="text/javascript" src= "{% static 'human/highcharts.js' %}"></script>
-<script type="text/javascript" src= "{% static 'human/highcharts-3d.js' %}"></script>
-<script type="text/javascript" src= "{% static 'human/exporting.js' %}"></script>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">ORBONA</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="{% url 'human:index' %}">Home</a></li>
+            
+          </ul>
+        </div>
+      </div>
 
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">ORBONA</a>
-    </div>
-    <div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="{% url 'human:index' %}">Home</a></li>
-        
-      </ul>
-    </div>
-  </div>
-
-
-<div id="container"></div>
-
-<div id = "analysis">
-
-    
-
-
-</div>
-
-<div id = "action"></div>
-
+<div id="container" style="height: 450px; width: 800px; margin: 0 auto;"></div>
     </body>
 </html>
