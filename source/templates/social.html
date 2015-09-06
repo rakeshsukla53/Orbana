@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Highcharts Example</title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <style type="text/css">
+#container, #sliders {
+    
+    margin: 0 auto;
+}
+#container {
+    width: 1200px;
+    height: 600px; 
+}
+        </style>
+        <script type="text/javascript">
+$(function () {
+    // Set up the chart
+    var chart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'container',
+            type: 'column',
+            margin: 75,
+            options3d: {
+                enabled: true,
+                alpha: 15,
+                beta: 15,
+                depth: 50,
+                viewDistance: 25
+            }
+        },
+        xAxis: {
+            categories: ['Texas', 'Louisana', 'North Carolina', 'California', 'Michigan', 'Kansas', 'Florida', 'New Jersey','Oregon'],            
+            gridLineWidth: 1,
+            minorGridLineWidth: 0,
+            title: {
+                text: 'States'
+            }
+        },
+         exporting:{
+            enabled: false
+        },
+        title: {
+            text: 'Wage per annum vs. State'
+        },
+        subtitle: {
+            text: 'Data collected from data.gov'
+        },
+        plotOptions: {
+            column: {
+                depth: 25
+            }
+        },
+        series: [{
+            name: 'Wage per annum',
+            data: [26.019, 24.442, 29.527, 25.284, 25.681, 26.924, 26.236, 36.027, 26.809],
+
+        },
+
+        {
+            name: 'Frequency in this state',
+            data: [35, 7, 23, 31, 25, 6, 23, 13, 2]
+        }
+
+
+        ],
+
+    });
+
+    function showValues() {
+        $('#R0-value').html(chart.options.chart.options3d.alpha);
+        $('#R1-value').html(chart.options.chart.options3d.beta);
+    }
+
+    // Activate the sliders
+    $('#R0').on('change', function () {
+        chart.options.chart.options3d.alpha = this.value;
+        showValues();
+        chart.redraw(false);
+    });
+    $('#R1').on('change', function () {
+        chart.options.chart.options3d.beta = this.value;
+        showValues();
+        chart.redraw(false);
+    });
+
+    showValues();
+});
+        </script>
+    </head>
+    <body>
+{% load staticfiles %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+<script type="text/javascript" src= "{% static 'human/highcharts.js' %}"></script>
+<script type="text/javascript" src= "{% static 'human/highcharts-3d.js' %}"></script>
+<script type="text/javascript" src= "{% static 'human/exporting.js' %}"></script>
+
+<div id="container"></div>
+
+    </body>
+</html>

@@ -27,6 +27,7 @@ class UserForm(forms.ModelForm):
         return "California"
 
 class LocationForm(forms.Form):
-    location = forms.CharField(max_length = 254)
+    location = forms.CharField(max_length = 254, label = '', widget = forms.TextInput(attrs = {'class': 'location_fill', 'placeholder':
+        'Please enter your location'}))
 
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DataTraffick</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+
+        body{
+            background-color: #374662;
+        }
+
+        .location_fill{
+            position: absolute;
+            top: -10%;
+            height: 50%;
+            width: 100%;
+            text-align: center; 
+
+        }
+
+        #submit_btn{
+            position: absolute;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+    {% load staticfiles %}
+    
+        <img style = "position: absolute; top: 20%; left: 43%;" src = "{% static 'human/img/logo-white.png' %}" />
+   
+        <form style = "position: absolute; top: 40%; left: 35%; height: 15%; width: 30%;"id = "viewData" action = "{% url 'human:form' %}" method="post" >
+            {% csrf_token %}
+            {{form}}
+            <button  id = "submit_btn" type="submit" form="viewData" value="Submit" class="btn btn-info btn-block">Visualize</button>  
+        </form>
+
+</body>
+</html>
+

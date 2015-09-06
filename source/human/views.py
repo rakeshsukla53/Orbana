@@ -14,8 +14,12 @@ from django.contrib import messages
 import json
 
 # Create your views here.
-class index(View):
-	template_name = "home.html"
+
+def index(request):
+	return render(request, "home.html", {})
+
+class form(View):
+	template_name = "form.html"
 	form = LocationForm
 
 	def get(self, request, *args, **kwargs):
@@ -46,8 +50,6 @@ class action(View):
 		return render(request, "index.html", {'state': state, 'state_name': state_name, 'problem': problem, 'count': count})
 
 
-
-
 class orgAction(View):
 
 	def get(self, request, state_name,  *args, **kwargs):
@@ -59,13 +61,11 @@ class orgAction(View):
 		return HttpResponse("Okay")
 
 
-
+#Map Data Cache
 def mapData(request):
-
 	data = {}
 	numbers = Phone.objects.all()
 
-	counter = 0 
 	for num in numbers:
 		pos = str(num.latitude)+" "+ str(num.longitude)
 
@@ -76,12 +76,24 @@ def mapData(request):
 		else:
 			data[pos][0] = data[pos][0] + 1
 			data[pos].append([num.phone_number, num.frequency])
-			
-		counter = counter + 1
-
 
 	return HttpResponse(json.dumps(data), content_type = "application/json")
 
+#All Statistics
+def economics(request):
+	template = "economics.html"
+	return render(request, template, {})
+
+def social(request):
+	template = "social.html"
+	return render(request, template, {})
 
 
+def organizations(request):
+	template = "org.html"
+	return render(request, template, {})
+
+def health(request):
+	template = "health.html"
+	return render(request, template, {})
 
