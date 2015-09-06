@@ -19,6 +19,8 @@ ranking.sort(key=itemgetter(1), reverse=True)
 
 ranking.sort(key=itemgetter(0))
 
+print ranking
+
 newRank = []
 
 for key in ranking:
