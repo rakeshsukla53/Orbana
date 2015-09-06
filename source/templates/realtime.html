@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<head>
+  <title>Pusher Test</title>
+
+  <body>
+    <div id="div1">
+      <p id="p1">This is a paragraph.</p>
+      <p id="p2">This is another paragraph.</p>
+    </div>
+  </body>
+  <script>
+    // Enable pusher logging - don't include this in production
+    Pusher.log = function(message) {
+      if (window.console && window.console.log) {
+        window.console.log(message);
+      }
+    };
+
+    var pusher = new Pusher('47bfcb4c7a5388cdfcdd', {
+      encrypted: true
+    });
+    var channel = pusher.subscribe('test_channel');
+    channel.bind('my_event', function(data) {
+      
+          alert(data.message);
+    });
+  </script>
+</head>
