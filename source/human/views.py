@@ -44,9 +44,6 @@ class action(View):
 		
 		return render(request, "index.html", {'state': state, 'state_name': state_name, 'problem': problem, 'count': count})
 
-
-
-
 class orgAction(View):
 
 	def get(self, request, pk,  *args, **kwargs):
