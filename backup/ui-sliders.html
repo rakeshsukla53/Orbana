@@ -2,30 +2,36 @@
 <html lang="en">
     <head>        
         <!-- meta section -->
-        <title>Orbana</title>
+        <title>Intuitive - Admin Dashboard Template</title>
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
         <meta http-equiv="X-UA-Compatible" content="IE=edge" >
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
         
         <link rel="icon" href="favicon.ico" type="image/x-icon" >
-        <!-- ./meta section -->
+        <!-- /meta section -->
         
         <!-- css styles -->
+        <link rel="stylesheet" type="text/css" href="css/dev-plugins/ion/ion.rangeSlider.css"/>
+        <link rel="stylesheet" type="text/css" href="css/dev-plugins/ion/ion.rangeSlider.skinFlat.css"/>   
+        
         <link rel="stylesheet" type="text/css" href="css/default-blue-white.css" id="dev-css">
-        <!-- ./css styles -->                              
+        <!-- ./css styles -->
         
         <!--[if lte IE 9]>
         <link rel="stylesheet" type="text/css" href="http://aqvatarius.com/themes/intuitive/css/dev-other/dev-ie-fix.css">
         <![endif]-->
         
+        <!-- less include -->        
+        <link rel="stylesheet/less" type="text/css" href="http://aqvatarius.com/themes/intuitive/css/default.less">
+        <script type="text/javascript" src="js/plugins/less/less.min.js"></script>                
+        <!-- /less include -->                                       
+                
         <!-- javascripts -->
         <script type="text/javascript" src="js/plugins/modernizr/modernizr.js"></script>
         <!-- ./javascripts -->
         
-        <style>
-            .dev-page{visibility: hidden;}            
-        </style>
+        <style>.dev-page{visibility: hidden;}</style>
     </head>
     <body>
         <!-- set loading layer -->
@@ -38,44 +44,34 @@
             <!-- page header -->    
             <div class="dev-page-header">
                 
-                <div class="dph-logo" id="tour-step-1">
-                    <a href="index.html">Orbana!</a>
+                <div class="dph-logo">
+                    <a href="index.html">Intuitive</a>
                     <a class="dev-page-sidebar-collapse">
                         <div class="dev-page-sidebar-collapse-icon">
                             <span class="line-one"></span>
                             <span class="line-two"></span>
                             <span class="line-three"></span>
-                            
                         </div>
                     </a>
                 </div>
 
-                <ul class="dph-buttons pull-right"> 
-                    
-                    <li class="dph-button-stuck" class="dev-page-sidebar">
-                        <a href="index.html#" class="btn btn-xs start-tour">Tour</a>
-                    </li>
-                    
+                <ul class="dph-buttons pull-right">                    
                     <li class="dph-button-stuck">
-                        <a href="index.html#" class="dev-page-search-toggle">
+                        <a href="ui-sliders.html#" class="dev-page-search-toggle">
                             <div class="dev-page-search-toggle-icon">
                                 <span class="circle"></span>
                                 <span class="line"></span>
                             </div>
                         </a>
-                    </li>     
-                    
+                    </li>                    
                     <li class="dph-button-stuck">
-                        <a href="index.html#" class="dev-page-rightbar-toggle">
+                        <a href="ui-sliders.html#" class="dev-page-rightbar-toggle">
                             <div class="dev-page-rightbar-toggle-icon">
                                 <span class="line-one"></span>
                                 <span class="line-two"></span>
                             </div>
                         </a>
                     </li>
-                    
-                  
-                    
                 </ul>                                                
                 
             </div>
@@ -85,52 +81,53 @@
             <div class="dev-page-container">
 
                 <!-- page sidebar -->
-                <div class="dev-page-sidebar">                    
+                <div class="dev-page-sidebar">
                     
                     <div class="profile profile-transparent">
                         <div class="profile-image">
                             <img src="assets/images/users/user_1.jpg">
                             <div class="profile-badges">
-                                <a href="index.html#" class="profile-badges-left"><i class="fa fa-trophy"></i> 243</a>
-                                <a href="index.html#" class="profile-badges-right"><i class="fa fa-users"></i> 1,971</a>
+                                <a href="ui-sliders.html#" class="profile-badges-left"><i class="fa fa-trophy"></i> 243</a>
+                                <a href="ui-sliders.html#" class="profile-badges-right"><i class="fa fa-users"></i> 1,971</a>
                             </div>
+                            <div class="profile-status online"></div>
                         </div>
-                        <div class="profile-info" id="tour-step-2">
-                            <h4>Location Name</h4>
-                            <span>Bigger Location Place</span>
+                        <div class="profile-info">
+                            <h4>Devin Stephens</h4>
+                            <span>System Administrator in Company</span>
                         </div>                        
                     </div>
                     
                     <ul class="dev-page-navigation">
-                        <li class="title" id="tour-step-3">Navigation</li>
-                        <li class="active">
-                            <a href="index.html"><i class="fa fa-desktop"></i> <span>Dashboard</span></a>
-                        </li>                        
+                        <li class="title">Navigation</li>
                         <li>
-                            <a href="index.html#"><i class="fa fa-file-o"></i> <span>Pages</span></a>
+                            <a href="index.html"><i class="fa fa-desktop"></i> <span>Dashboard</span></a>
+                        </li>
+                        <li>
+                            <a href="ui-sliders.html#"><i class="fa fa-file-o"></i> <span>Pages</span></a>
                             <ul>
                                 <li>
-                                    <a href="index.html#">Email</a>
+                                    <a href="ui-sliders.html#">Email</a>
                                     <ul>
                                         <li><a href="pages-email-inbox.html">Inbox</a></li>
                                         <li><a href="pages-email-compose.html">Compose</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="index.html#">Login Forms</a>
+                                    <a href="ui-sliders.html#">Login Forms</a>
                                     <ul>
                                         <li><a href="pages-login.html" target="_blank">Login</a></li>
                                         <li><a href="pages-login-lite.html" target="_blank">Login Lite</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="index.html#">Registration Forms</a>
+                                    <a href="ui-sliders.html#">Registration Forms</a>
                                     <ul>
                                         <li><a href="pages-registration.html" target="_blank">Registration</a></li>
                                         <li><a href="pages-registration-lite.html" target="_blank">Registration Lite</a></li>
                                     </ul>
                                 </li>                                
-                                <li><a href="pages-lock-screen.html">Lock Screen</a></li>
+                                <li><a href="pages-lock-screen.html">Lock Screen</a></li>                                
                                 <li><a href="pages-session-timeout.html">Session Timeout</a></li>
                                 <li><a href="pages-edit-profile.html">Edit Profile</a></li>
                                 <li><a href="pages-profile.html">Profile</a></li>
@@ -141,27 +138,27 @@
                                 <li><a href="pages-error-404.html">Error 404</a></li>                                
                                 <li><a href="pages-contacts.html">Contacts</a></li>
                             </ul>
-                        </li>                        
+                        </li>                       
                         <li>
-                            <a href="index.html#"><i class="fa fa-cube"></i> <span>Layouts</span> <span class="label label-danger">+2</span></a>
+                            <a href="ui-sliders.html#"><i class="fa fa-cube"></i> <span>Layouts</span> <span class="label label-danger">+2</span></a>
                             <ul>                                
                                 <li><a href="layout-boxed.html">Boxed</a></li>
                                 <li><a href="layout-no-footer.html">No Footer</a></li>
                                 <li><a href="layout-fixed-footer.html">Fixed Footer</a></li>
                                 <li><a href="layout-footer-collapsed.html">Footer Collapsed</a></li>
-                                <li><a href="layout-nav-minimized.html">Minimized Navigation</a></li>                                
+                                <li><a href="layout-nav-minimized.html">Minimized Navigation</a></li>
                                 <li><a href="layout-nav-collapsed.html">Collapsed Navigation</a></li>
                                 <li><a href="layout-nav-right.html">Navigation Right</a></li>
                                 <li><a href="layout-nav-horizontal.html">Horizontal Navigation <span class="label label-danger">New</span></a></li>
                                 <li><a href="layout-tabbed.html">Tabbed Content <span class="label label-danger">New</span></a></li>
                             </ul>
-                        </li>       
+                        </li>
                         <li>
                             <a href="features.html"><i class="fa fa-globe"></i> <span>Features List</span></a>
-                        </li>
+                        </li>                        
                         <li class="title">Components</li>
-                        <li>
-                            <a href="#"><i class="fa fa-cogs"></i> <span>UI Kits</span>  <span class="label label-danger">+1</span></a>
+                        <li class="active">
+                            <a href="ui-sliders.html#"><i class="fa fa-cogs"></i> <span>UI Kits</span>  <span class="label label-danger">+1</span></a>
                             <ul>                                
                                 <li><a href="ui-elements.html">UI Elements</a></li>
                                 <li><a href="ui-widgets.html">Widgets <span class="label label-danger">New</span></a></li>
@@ -172,12 +169,12 @@
                                 <li><a href="ui-icons.html">Icons</a></li>
                                 <li><a href="ui-tour.html">Tour</a></li>
                                 <li><a href="ui-slide-menu.html">Sliding Menu</a></li>
-                                <li><a href="ui-sliders.html">Sliders</a></li>
+                                <li class="active"><a href="ui-sliders.html">Sliders</a></li>
                                 <li><a href="ui-nestable.html">Nestable List</a></li>
                                 <li><a href="ui-tree-view.html">Tree View</a></li>
                                 <li><a href="ui-language.html">Change Language</a></li>
                                 <li>
-                                    <a href="#">Timeline</a>
+                                    <a href="ui-sliders.html#">Timeline</a>
                                     <ul>
                                         <li><a href="ui-timeline-simple.html">Simple Timeline</a></li>
                                         <li><a href="ui-timeline.html">Timeline</a></li>
@@ -186,7 +183,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-pencil"></i> <span>Forms</span> <span class="label label-danger">+1</span></a>
+                            <a href="ui-sliders.html#"><i class="fa fa-pencil"></i> <span>Forms</span> <span class="label label-danger">+1</span></a>
                             <ul>
                                 <li><a href="form-elements.html">Form Elements</a></li>
                                 <li><a href="form-layouts.html">Form Layouts</a></li>
@@ -203,7 +200,7 @@
                             <a href="maps.html"><i class="fa fa-map-marker"></i> <span>Maps</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-table"></i> <span>Tables</span></a>
+                            <a href="ui-sliders.html#"><i class="fa fa-table"></i> <span>Tables</span></a>
                             <ul>
                                 <li><a href="tables-static.html">Static Tables</a></li>
                                 <li><a href="tables-sortable.html">Sortable Tables</a></li>
@@ -211,18 +208,18 @@
                             </ul>
                         </li>                        
                         <li>
-                            <a href="#"><i class="fa fa-code-fork"></i> <span>Multi-Level Navigation</span></a>
+                            <a href="ui-sliders.html#"><i class="fa fa-code-fork"></i> <span>Multi-Level Navigation</span></a>
                             <ul>
-                                <li><a href="#">Second Level</a></li>
+                                <li><a href="ui-sliders.html#">Second Level</a></li>
                                 <li>
-                                    <a href="#">Second Level</a>
+                                    <a href="ui-sliders.html#">Second Level</a>
                                     <ul>
-                                        <li><a href="#">Third Level</a></li>
-                                        <li><a href="#">Third Level</a></li>
-                                        <li><a href="#">Third Level</a></li>
+                                        <li><a href="ui-sliders.html#">Third Level</a></li>
+                                        <li><a href="ui-sliders.html#">Third Level</a></li>
+                                        <li><a href="ui-sliders.html#">Third Level</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Second Level</a></li>
+                                <li><a href="ui-sliders.html#">Second Level</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -237,112 +234,82 @@
                         
                         <!-- page title -->
                         <div class="page-title">
-                            <h1>Contact Organizations</h1>
-                            <p>Awesome gallery powered by isotope plugin</p>
+                            <h1>Slider</h1>
+                            <p>Cool, comfortable, responsive and easily customizable range slider</p>
                             
                             <ul class="breadcrumb">
-                                <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Pages</a></li>
-                                <li>Gallery</li>
+                                <li><a href="ui-sliders.html#">Dashboard</a></li>
+                                <li><a href="ui-sliders.html#">Ui Kits</a></li>
+                                <li>Slider</li>
                             </ul>
                         </div>                        
-                        <!-- ./page title -->
+                        <!-- ./page title -->                                                
                         
-                        <!-- gallery powered by isotope -->
-                        <div class="gallery isotope" id="gallery">
-                            <div class="gallery-sizer"></div>
-                            <div class="gallery-gutter"></div>
-                                                        
-                            <a href="assets/images/gallery/img_10.jpg" class="gallery-item">
-                                <img src="assets/images/gallery/img_10.jpg">
-                                <div class="gallery-item-info">
-                                    <img src="assets/images/users/user_1.jpg"> Devin Stephens
-                                    <span class="pull-right">1h ago <i class="fa fa-clock-o"></i></span>
-                                </div>
-                            </a>                            
-                                                        
-                            <a href="assets/images/gallery/img_11.jpg" class="gallery-item gallery-item-2">
-                                <img src="assets/images/gallery/img_11.jpg">
-                                <div class="gallery-item-info">
-                                    <img src="assets/images/users/user_1.jpg"> Devin Stephens
-                                    <span class="pull-right">2h ago <i class="fa fa-clock-o"></i></span>
-                                </div>
-                            </a>
+                        
+                        <div class="wrapper wrapper-white">
+                            <div class="page-subtitle">                                
+                                <h3>Ion Range Slider</h3>
+                                <p>Beautiful, comfortable and easily customizable range slider with skins support. Also support events and public methods, has flexible settings and can be completely modified with CSS.</p>
+                            </div>
                             
-                            <a href="assets/images/gallery/img_2.jpg" class="gallery-item">
-                                <img src="assets/images/gallery/img_2.jpg">
-                                <div class="gallery-item-info">
-                                    <img src="assets/images/users/user_1.jpg"> Devin Stephens
-                                    <span class="pull-right">1 day ago <i class="fa fa-clock-o"></i></span>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Default <span>Start without params</span></label>                                                                                    
+                                        <input type="text" id="ise_default" name="ise_default" value="">                                        
+                                    </div>
                                 </div>
-                            </a>
-                            
-                            <a href="assets/images/gallery/img_8.jpg" class="gallery-item">
-                                <img src="assets/images/gallery/img_8.jpg">
-                                <div class="gallery-item-info">
-                                    <img src="assets/images/users/user_1.jpg"> Devin Stephens
-                                    <span class="pull-right">2 day ago <i class="fa fa-clock-o"></i></span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Min-Max <span>Set min value, max value and start point</span></label>                                        
+                                        <input type="text" id="ise_min_max" name="ise_min_max" value="">
+                                    </div>
                                 </div>
-                            </a>
-                            
-                            <a href="assets/images/gallery/img_3.jpg" class="gallery-item">
-                                <img src="assets/images/gallery/img_3.jpg">
-                                <div class="gallery-item-info">
-                                    <img src="assets/images/users/user_1.jpg"> Devin Stephens
-                                    <span class="pull-right">1 week ago <i class="fa fa-clock-o"></i></span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Prefix <span>Showing grid and adding prefix "$"</span></label>
+                                        <input type="text" id="ise_prefix" name="ise_prefix" value="">
+                                    </div>
                                 </div>
-                            </a>                                                                                    
-                            
-                            <a href="assets/images/gallery/img_4.jpg" class="gallery-item">
-                                <img src="assets/images/gallery/img_4.jpg">
-                                <div class="gallery-item-info">
-                                    <img src="assets/images/users/user_1.jpg"> Devin Stephens
-                                    <span class="pull-right">1 week ago <i class="fa fa-clock-o"></i></span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Step <span>Step 250</span></label>
+                                        <input type="text" id="ise_step" name="ise_step" value="">
+                                    </div>
                                 </div>
-                            </a>                                                        
-
-                            <a href="assets/images/gallery/img_5.jpg" class="gallery-item">
-                                <img src="assets/images/gallery/img_5.jpg">
-                                <div class="gallery-item-info">
-                                    <img src="assets/images/users/user_1.jpg"> Devin Stephens
-                                    <span class="pull-right">1 week ago <i class="fa fa-clock-o"></i></span>
+                            </div>    
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Custom Values <span>One more example with strings</span></label>
+                                        <input type="text" id="ise_custom_values" name="ise_custom_values" value="">
+                                    </div>
                                 </div>
-                            </a>
-                            
-                            <a href="assets/images/gallery/img_6.jpg" class="gallery-item">
-                                <img src="assets/images/gallery/img_6.jpg">
-                                <div class="gallery-item-info">
-                                    <img src="assets/images/users/user_1.jpg"> Devin Stephens
-                                    <span class="pull-right">1 week ago <i class="fa fa-clock-o"></i></span>
+                            </div>    
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Decorate <span>Taking care about how from and to values connect? Use decorate_both option</span></label>
+                                        <input type="text" id="ise_decorate" name="ise_decorate" value="">
+                                    </div>
                                 </div>
-                            </a>
-                            
-                            <a href="assets/images/gallery/img_7.jpg" class="gallery-item">
-                                <img src="assets/images/gallery/img_7.jpg">
-                                <div class="gallery-item-info">
-                                    <img src="assets/images/users/user_1.jpg"> Devin Stephens
-                                    <span class="pull-right">1 week ago <i class="fa fa-clock-o"></i></span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Disabled <span>You can lock your slider, by using disable option</span></label>
+                                        <input type="text" id="ise_disabled" name="ise_disabled" value="">
+                                    </div>
                                 </div>
-                            </a>                                                                                                                
-
-                            <a href="assets/images/gallery/img_1.jpg" class="gallery-item">
-                                <img src="assets/images/gallery/img_1.jpg">
-                                <div class="gallery-item-info">
-                                    <img src="assets/images/users/user_1.jpg"> Devin Stephens
-                                    <span class="pull-right">1 week ago <i class="fa fa-clock-o"></i></span>
-                                </div>
-                            </a>
-                            
-                            <a href="assets/images/gallery/img_9.jpg" class="gallery-item">
-                                <img src="assets/images/gallery/img_9.jpg">
-                                <div class="gallery-item-info">
-                                    <img src="assets/images/users/user_1.jpg"> Devin Stephens
-                                    <span class="pull-right">2 weeks ago <i class="fa fa-clock-o"></i></span>
-                                </div>
-                            </a>
-
+                            </div>                                                        
                         </div>
-                        <!-- ./gallery powered by isotope -->
+                        
                         
                         <!-- Copyright -->
                         <div class="copyright">
@@ -350,11 +317,10 @@
                                 &copy; 2015 <strong>Aqvatarius</strong>. All rights reserved.
                             </div>
                             <div class="pull-right">
-                                <a href="#">Terms of use</a> / <a href="#">Privacy Policy</a>
+                                <a href="ui-sliders.html#">Terms of use</a> / <a href="ui-sliders.html#">Privacy Policy</a>
                             </div>
                         </div>
                         <!-- ./Copyright -->
-                        
                     </div>
                     <!-- ./page content container -->
                                         
@@ -370,48 +336,48 @@
                     <div class="rightbar-chat-frame-contacts scroll">
                         <div class="rightbar-title">
                             <h3>Messages</h3>
-                            <a href="#" class="btn btn-default btn-rounded rightbar-close pull-right"><span class="fa fa-times"></span></a>
+                            <a href="ui-sliders.html#" class="btn btn-default btn-rounded rightbar-close pull-right"><span class="fa fa-times"></span></a>
                         </div>
                         <ul class="contacts">
                             <li class="title">online</li>
                             <li>
-                                <a href="#" class="status online">
+                                <a href="ui-sliders.html#" class="status online">
                                     <img src="assets/images/users/user_1.jpg" title="Aqvatarius"> John Doe                                            
                                 </a>
                             </li>                                    
                             <li>
-                                <a href="#" class="status online">
+                                <a href="ui-sliders.html#" class="status online">
                                     <img src="assets/images/users/user_2.jpg" title="Aqvatarius"> Shannon Freeman                                            
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="status away">
+                                <a href="ui-sliders.html#" class="status away">
                                     <img src="assets/images/users/user_3.jpg" title="Aqvatarius"> Devin Stephens                                            
                                 </a>
                             </li>                                    
                             <li>
-                                <a href="#" class="status away">
+                                <a href="ui-sliders.html#" class="status away">
                                     <img src="assets/images/users/user_4.jpg" title="Aqvatarius"> Marissa George                                           
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="status dont">
+                                <a href="ui-sliders.html#" class="status dont">
                                     <img src="assets/images/users/user_5.jpg" title="Aqvatarius"> Sydney Reeves                                           
                                 </a>
                             </li>
                             <li class="title">offline</li>
                             <li>
-                                <a href="#" class="status">
+                                <a href="ui-sliders.html#" class="status">
                                     <img src="assets/images/users/user_6.jpg" title="Aqvatarius"> Kaitlynn Bowen                                           
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="status">
+                                <a href="ui-sliders.html#" class="status">
                                     <img src="assets/images/users/user_7.jpg" title="Aqvatarius"> Karen Spencer                                            
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="status">
+                                <a href="ui-sliders.html#" class="status">
                                     <img src="assets/images/users/user_8.jpg" title="Aqvatarius"> Darrell Wolfe                                            
                                 </a>
                             </li>                                    
@@ -421,8 +387,8 @@
                     <div class="rightbar-chat-frame-chat">
                         <div class="user">
                             <div class="user-panel">
-                                <a href="#" class="btn btn-default btn-rounded rightbar-chat-close"><span class="fa fa-angle-left"></span></a>
-                                <a href="#" class="btn btn-default btn-rounded pull-right"><span class="fa fa-user"></span></a>
+                                <a href="ui-sliders.html#" class="btn btn-default btn-rounded rightbar-chat-close"><span class="fa fa-angle-left"></span></a>
+                                <a href="ui-sliders.html#" class="btn btn-default btn-rounded pull-right"><span class="fa fa-user"></span></a>
                             </div>
                             <div class="user-info">
                                 <div class="user-info-image status online">
@@ -486,9 +452,9 @@
                 
                 <!-- page footer buttons -->
                 <ul class="dev-page-footer-buttons">                    
-                    <li><a href="#footer_content_1" class="dev-page-footer-container-open"><i class="fa fa-database"></i></a></li>                    
-                    <li><a href="#footer_content_2" class="dev-page-footer-container-open"><i class="fa fa-bar-chart"></i></a></li>
-                    <li><a href="#footer_content_3" class="dev-page-footer-container-open"><i class="fa fa-server"></i></a></li>
+                    <li><a href="ui-sliders.html#footer_content_1" class="dev-page-footer-container-open"><i class="fa fa-database"></i></a></li>                    
+                    <li><a href="ui-sliders.html#footer_content_2" class="dev-page-footer-container-open"><i class="fa fa-bar-chart"></i></a></li>
+                    <li><a href="ui-sliders.html#footer_content_3" class="dev-page-footer-container-open"><i class="fa fa-server"></i></a></li>
                 </ul>
                 <!-- ./page footer buttons -->
                 <!-- page footer container -->
@@ -496,7 +462,7 @@
                     
                     <!-- loader and close button -->
                     <div class="dev-page-footer-container-layer">
-                        <a href="#" class="dev-page-footer-container-layer-button"></a>
+                        <a href="ui-sliders.html#" class="dev-page-footer-container-layer-button"></a>
                     </div>
                     <!-- ./loader and close button -->                    
                     
@@ -587,15 +553,15 @@
                     <!-- projects -->
                     <div class="dev-page-footer-container-content" id="footer_content_3">                        
                         <ul class="dev-list-projects">
-                            <li><a href="#" class="active">Intuitive</a></li>
-                            <li><a href="#">Atlant</a></li>
-                            <li><a href="#">Gemini</a></li>
-                            <li><a href="#">Taurus</a></li>
-                            <li><a href="#">Leo</a></li>
-                            <li><a href="#">Aries</a></li>
-                            <li><a href="#">Virgo</a></li>
-                            <li><a href="#">Aquarius</a></li>
-                            <li><a href="#" class="dev-list-projects-add"><i class="fa fa-plus"></i></a></li>
+                            <li><a href="ui-sliders.html#" class="active">Intuitive</a></li>
+                            <li><a href="ui-sliders.html#">Atlant</a></li>
+                            <li><a href="ui-sliders.html#">Gemini</a></li>
+                            <li><a href="ui-sliders.html#">Taurus</a></li>
+                            <li><a href="ui-sliders.html#">Leo</a></li>
+                            <li><a href="ui-sliders.html#">Aries</a></li>
+                            <li><a href="ui-sliders.html#">Virgo</a></li>
+                            <li><a href="ui-sliders.html#">Aquarius</a></li>
+                            <li><a href="ui-sliders.html#" class="dev-list-projects-add"><i class="fa fa-plus"></i></a></li>
                         </ul>                        
                     </div>
                     <!-- ./projects -->
@@ -624,102 +590,27 @@
             </div>
             <!-- page search -->            
         </div>
-        <!-- ./page wrapper -->
-
-        <!-- gallery -->
-        <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-            <div class="slides"></div>
-            <h3 class="title"></h3>
-            <a class="prev">‹</a>
-            <a class="next">›</a>
-            <a class="close">×</a>
-            <a class="play-pause"></a>
-            <ol class="indicator"></ol>
-        </div>
-        <!-- ./gallery -->
+        <!-- ./page wrapper -->                
         
         <!-- javascript -->
         <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>       
         <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
         
-        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>        
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
         <script type="text/javascript" src="js/plugins/moment/moment.js"></script>
         
         <script type="text/javascript" src="js/plugins/knob/jquery.knob.min.js"></script>
         <script type="text/javascript" src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
         
-        <script type="text/javascript" src="js/plugins/isotope/isotope.pkgd.min.js"></script>        
-        <script type="text/javascript" src="js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>        
-        <script type="text/javascript" src="js/plugins/unveil/jquery.unveil.js"></script>
-        
-        <script type="text/javascript" src="js/dev-settings.js"></script>        
+        <script type="text/javascript" src="js/plugins/ion/ion.rangeSlider.min.js"></script>
+
+        <script type="text/javascript" src="js/dev-settings.js"></script>
         <script type="text/javascript" src="js/dev-loaders.js"></script>
         <script type="text/javascript" src="js/dev-layout-default.js"></script>
         <script type="text/javascript" src="js/dev-app.js"></script>
+        
+        <script type="text/javascript" src="js/demo-sliders.js"></script>
         <!-- ./javascript -->
-        
-        <script type="text/javascript">        
-            if (document.images) {
-                    img1 = new Image();
-                    img2 = new Image();
-                    img3 = new Image();
-                    img4 = new Image();
-                    img5 = new Image();
-                    img6 = new Image();
-                    img7 = new Image();
-                    img8 = new Image();
-                    img9 = new Image();
-                    img10 = new Image();                    
-
-                    img1.src = "assets/images/gallery/img_1.jpg";
-                    img2.src = "assets/images/gallery/img_2.jpg";
-                    img3.src = "assets/images/gallery/img_3.jpg";
-                    img4.src = "assets/images/gallery/img_4.jpg";
-                    img5.src = "assets/images/gallery/img_5.jpg";
-                    img6.src = "assets/images/gallery/img_6.jpg";
-                    img7.src = "assets/images/gallery/img_7.jpg";
-                    img8.src = "assets/images/gallery/img_8.jpg";
-                    img9.src = "assets/images/gallery/img_9.jpg";
-                    img10.src = "assets/images/gallery/img_10.jpg";
-            }
-	</script>
-        
-        <script>
-                        
-            $(function(){                
-                setTimeout(function(){
-                    
-                    $("img").unveil(200);
-                
-                    $('.gallery.isotope').isotope({
-                        itemSelector: '.gallery-item',
-                        percentPosition: true,
-                        masonry: {                 
-                          columnWidth: '.gallery-sizer',
-                          gutter: '.gallery-gutter'
-                        }                
-                    });                
-
-                    $(".dev-page-sidebar-collapse, .dev-page-sidebar-minimize").on("click",function(){
-                        setTimeout(function(){
-                            $('.gallery.isotope').isotope('layout');
-                            dev_layout_alpha_content.init(dev_layout_alpha_settings);
-                        },300);                    
-                    });
-
-                    document.getElementById('gallery').onclick = function (event) {
-                        event = event || window.event;
-                        var target = event.target || event.srcElement,
-                            link = target.src ? target.parentNode : target,
-                            options = {index: link, event: event},
-                            links = this.getElementsByTagName('a');
-                        blueimp.Gallery(links, options);
-                    };
-                    
-                },200);
-                
-            });
-        </script>
     </body>
 </html>
 
